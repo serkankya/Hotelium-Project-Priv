@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace Project.EntityLayer.Concrete
 		public int RoomId { get; set; }
 		public string? RoomNumber { get; set; }
 		public string? RoomCoverImage { get; set; }
+		[Precision(18, 2)]
 		public decimal Price { get; set; }
 		public string? Title { get; set; }
 		public Int16 BedCount { get; set; }
