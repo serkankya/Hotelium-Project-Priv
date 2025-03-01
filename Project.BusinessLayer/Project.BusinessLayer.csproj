@@ -24,9 +24,4 @@
     <ProjectReference Include="..\Project.EntityLayer\Project.EntityLayer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
-  </ItemGroup>
-
 </Project>

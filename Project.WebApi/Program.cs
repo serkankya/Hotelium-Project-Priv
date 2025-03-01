@@ -1,4 +1,10 @@
 
+using Project.BusinessLayer.Abstract;
+using Project.BusinessLayer.Concrete;
+using Project.DataAccessLayer.Abstract;
+using Project.DataAccessLayer.Concrete;
+using Project.DataAccessLayer.EntityFramework;
+
 namespace Project.WebApi
 {
 	public class Program
@@ -7,7 +13,9 @@ namespace Project.WebApi
 		{
 			var builder = WebApplication.CreateBuilder(args);
 
-			// Add services to the container.
+			builder.Services.AddDbContext<Context>();
+			builder.Services.AddScoped<IRoomDal, EfRoomDal>();
+			builder.Services.AddScoped<IRoomService, RoomManager>();
 
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
