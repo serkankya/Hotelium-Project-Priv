@@ -14,8 +14,21 @@ namespace Project.WebApi
 			var builder = WebApplication.CreateBuilder(args);
 
 			builder.Services.AddDbContext<Context>();
+
 			builder.Services.AddScoped<IRoomDal, EfRoomDal>();
 			builder.Services.AddScoped<IRoomService, RoomManager>();
+
+			builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
+			builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
+
+			builder.Services.AddScoped<ISubscriberDal, EfSubscriberDal>();
+			builder.Services.AddScoped<ISubscriberService, SubscriberManager>();
+
+			builder.Services.AddScoped<IServiceDal, EfServiceDal>();
+			builder.Services.AddScoped<IServiceService, ServiceManager>();
+
+			builder.Services.AddScoped<IStaffDal, EfStaffDal>();
+			builder.Services.AddScoped<IStaffService, StaffManager>();
 
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
