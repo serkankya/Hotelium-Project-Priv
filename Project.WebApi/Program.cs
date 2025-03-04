@@ -30,6 +30,14 @@ namespace Project.WebApi
 			builder.Services.AddScoped<IStaffDal, EfStaffDal>();
 			builder.Services.AddScoped<IStaffService, StaffManager>();
 
+			builder.Services.AddCors(opt =>
+			{
+				opt.AddPolicy("HoteliumApiCors", opts =>
+				{
+					opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+				});
+			});
+
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 			builder.Services.AddEndpointsApiExplorer();
@@ -44,8 +52,9 @@ namespace Project.WebApi
 				app.UseSwaggerUI();
 			}
 
-			app.UseAuthorization();
+			app.UseCors("HoteliumApiCors");
 
+			app.UseAuthorization();
 
 			app.MapControllers();
 
