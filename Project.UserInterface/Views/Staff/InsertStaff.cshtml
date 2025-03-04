@@ -1,0 +1,26 @@
+﻿@model InsertStaffViewModel
+
+@{
+	ViewData["Title"] = "InsertStaff";
+	Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+	<label>Personel Adı : </label>
+	<input type="text" asp-for="FullName" class="form-control" />
+	<br>
+	<label>Personel Unvanı : </label>
+	<input type="text" asp-for="Title" class="form-control" />
+	<br />
+	<label>Birinci Sosyal Medya : </label>
+	<input type="text" asp-for="SocialMediaFirst" class="form-control" />
+	<br />
+	<label>İkinci Sosyal Medya : </label>
+	<input type="text" asp-for="SocialMediaSecond" class="form-control" />
+	<br />
+	<label>Üçüncü Sosyal Medya : </label>
+	<input type="text" asp-for="SocialMediaThird" class="form-control" />
+	<br />
+	<button class="btn btn-primary">Personeli Kaydet</button>
+</form>
+

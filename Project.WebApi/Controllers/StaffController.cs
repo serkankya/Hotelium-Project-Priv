@@ -44,10 +44,11 @@ namespace Project.WebApi.Controllers
 			return Ok();
 		}
 
-		[HttpDelete]
-		public IActionResult DeleteStaff(Staff staff)
+		[HttpDelete("{id}")]
+		public IActionResult DeleteStaff(int id)
 		{
-			_staffService.TDelete(staff);
+			var values = _staffService.TGetById(id);
+			_staffService.TDelete(values);
 			return Ok();
 		}
 	}
