@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Personel</th>
+        <th>Unvan</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StaffId</td>
+            <td>@item.FullName</td>
+            <td>@item.Title</td>
+            <td><a href="/Staff/DeleteTestimonial/@item.StaffId" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
+            <td><a href="/Staff/UpdateTestimonial/@item.StaffId" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+            <td><a href="#" class="btn mb-1 btn-rounded btn-outline-info">Detaylar</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Staff/InsertTestimonial" class="btn btn-primary">Müşteri Ekle</a>
+
