@@ -30,6 +30,8 @@ namespace Project.WebApi
 			builder.Services.AddScoped<IStaffDal, EfStaffDal>();
 			builder.Services.AddScoped<IStaffService, StaffManager>();
 
+			builder.Services.AddAutoMapper(typeof(Program));
+
 			builder.Services.AddCors(opt =>
 			{
 				opt.AddPolicy("HoteliumApiCors", opts =>
