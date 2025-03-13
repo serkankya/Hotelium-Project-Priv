@@ -1,3 +1,6 @@
+using Project.DataAccessLayer.Concrete;
+using Project.EntityLayer.Concrete;
+
 namespace Project.UserInterface
 {
 	public class Program
@@ -8,6 +11,9 @@ namespace Project.UserInterface
 
 			// Add services to the container.
 			builder.Services.AddControllersWithViews();
+
+			builder.Services.AddDbContext<Context>();
+			builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
 
             builder.Services.AddHttpClient();
 
