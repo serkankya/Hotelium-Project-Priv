@@ -2,6 +2,7 @@
 using Project.UserInterface.DTOs.ServiceDto;
 using Project.EntityLayer.Concrete;
 using Project.UserInterface.DTOs.RegisterDto;
+using Project.UserInterface.DTOs.LoginDto;
 
 namespace Project.UserInterface.Mapping
 {
@@ -16,6 +17,9 @@ namespace Project.UserInterface.Mapping
 
 			//RegisterController
 			CreateMap<InsertUserDto, AppUser>().ReverseMap();
+
+			//LoginController
+			CreateMap<LoginUserDto, AppUser>().ReverseMap();
 		}
 	}
 }
