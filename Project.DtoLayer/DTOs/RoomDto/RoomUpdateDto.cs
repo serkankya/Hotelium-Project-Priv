@@ -39,5 +39,6 @@ namespace Project.DtoLayer.DTOs.RoomDto
         [Required(ErrorMessage = "Lütfen açıklamayı giriniz.")]
         [MaxLength(500, ErrorMessage = "Açıklama en fazla 500 karakter olmalıdır.")]
         public string? Description { get; set; }
-    }
+        public bool IsSelected { get; set; } = false;
+	}
 }

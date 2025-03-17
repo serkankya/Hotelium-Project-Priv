@@ -19,5 +19,6 @@ namespace Project.EntityLayer.Concrete
 		public Int16 BathCount { get; set; }
 		public bool Wifi { get; set; }
 		public string? Description { get; set; }
+		public bool IsSelected { get; set; } = false;
 	}
 }
