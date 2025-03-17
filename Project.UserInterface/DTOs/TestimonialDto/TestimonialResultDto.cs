@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.DtoLayer.DTOs.TestimonialDto
+namespace Project.UserInterface.DTOs.TestimonialDto
 {
     public class TestimonialResultDto
     {
