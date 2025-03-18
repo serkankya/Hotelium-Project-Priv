@@ -22,5 +22,6 @@ namespace Project.DataAccessLayer.Concrete
 		public DbSet<Subscriber> Subscribers { get; set; }
 		public DbSet<Staff> Staffs { get; set; }
 		public DbSet<About> Abouts { get; set; }
+		public DbSet<Booking> Bookings { get; set; }
 	}
 }
