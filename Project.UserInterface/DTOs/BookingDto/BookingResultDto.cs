@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.EntityLayer.Concrete
+namespace Project.UserInterface.DTOs.BookingDto
 {
-	public class Booking
+	public class BookingResultDto
 	{
 		public int BookingId { get; set; }
 		public string? Mail { get; set; }
