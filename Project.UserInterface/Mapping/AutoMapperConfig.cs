@@ -8,6 +8,7 @@ using Project.UserInterface.DTOs.RoomDto;
 using Project.UserInterface.DTOs.StaffDto;
 using Project.UserInterface.DTOs.SubscriberDto;
 using Project.UserInterface.DTOs.TestimonialDto;
+using Project.UserInterface.DTOs.BookingDto;
 
 namespace Project.UserInterface.Mapping
 {
@@ -50,6 +51,11 @@ namespace Project.UserInterface.Mapping
 			CreateMap<TestimonialResultDto, Testimonial>().ReverseMap();
 			CreateMap<TestimonialInsertDto, Testimonial>().ReverseMap();
 			CreateMap<TestimonialUpdateDto, Testimonial>().ReverseMap();
+
+			//BookingController
+			CreateMap<BookingResultDto, Booking>().ReverseMap();
+			CreateMap<BookingInsertDto, Booking>().ReverseMap();
+			CreateMap<BookingUpdateDto, Booking>().ReverseMap();
 		}
 	}
 }

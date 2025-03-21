@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Project.DtoLayer.DTOs.AboutDto;
+using Project.DtoLayer.DTOs.BookingDto;
 using Project.DtoLayer.DTOs.RoomDto;
 using Project.DtoLayer.DTOs.ServiceDto;
 using Project.EntityLayer.Concrete;
@@ -21,6 +22,10 @@ namespace Project.WebApi.Mapping
             //RoomController
             CreateMap<RoomInsertDto, Room>().ReverseMap();
             CreateMap<RoomUpdateDto, Room>().ReverseMap();
+
+            //BookingController
+            CreateMap<BookingInsertDto, Booking>().ReverseMap();
+            CreateMap<BookingUpdateDto, Booking>().ReverseMap();
         }
     }
 }
